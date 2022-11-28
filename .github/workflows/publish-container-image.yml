@@ -25,7 +25,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: 'Build'
-        run: ./mvnw -B --file pom.xml verify -Pnative
+        run: ./mvnw -B --file pom.xml verify -Pnative -Dquarkus.native.additional-build-args=-H:-UseContainerSupport
 
       -
         name: Set up QEMU
