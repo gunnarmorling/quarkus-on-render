@@ -14,8 +14,7 @@
 # docker run -i --rm -p 8080:8080 quarkus/code-with-quarkus
 #
 ###
-FROM registry.access.redhat.com/ubi8/ubi-minimal:8.6
-# FROM fedora:37
+FROM registry.fedoraproject.org/fedora-minimal:37
 
 WORKDIR /work/
 RUN chown 1001 /work \
